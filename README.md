@@ -70,7 +70,3 @@ The engine includes performance benchmarks comparing:
 - Monte Carlo vs PDE methods
 - CPU vs GPU implementations
 - Different variance reduction techniques
-
-## Contributing
-
-Please see CONTRIBUTING.md for guidelines on how to contribute to this project.
