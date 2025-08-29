@@ -1,0 +1,1561 @@
+Start testing: Aug 29 08:44 IST
+----------------------------------------------------------
+1/30 Testing: EuropeanOptionTest.BlackScholesComparison
+1/30 Test: EuropeanOptionTest.BlackScholesComparison
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=EuropeanOptionTest.BlackScholesComparison" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"EuropeanOptionTest.BlackScholesComparison" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = EuropeanOptionTest.BlackScholesComparison
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EuropeanOptionTest
+[ RUN      ] EuropeanOptionTest.BlackScholesComparison
+[       OK ] EuropeanOptionTest.BlackScholesComparison (0 ms)
+[----------] 1 test from EuropeanOptionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"EuropeanOptionTest.BlackScholesComparison" end time: Aug 29 08:44 IST
+"EuropeanOptionTest.BlackScholesComparison" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/30 Testing: AsianOptionTest.GeometricVsArithmetic
+2/30 Test: AsianOptionTest.GeometricVsArithmetic
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=AsianOptionTest.GeometricVsArithmetic" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"AsianOptionTest.GeometricVsArithmetic" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = AsianOptionTest.GeometricVsArithmetic
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from AsianOptionTest
+[ RUN      ] AsianOptionTest.GeometricVsArithmetic
+/Users/funda/Documents/Projects/quant/tests/test_asian_option.cpp:30: Failure
+Expected: (geomPrice) < (arithPrice), actual: 0 vs 0
+
+[  FAILED  ] AsianOptionTest.GeometricVsArithmetic (656 ms)
+[----------] 1 test from AsianOptionTest (656 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (656 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] AsianOptionTest.GeometricVsArithmetic
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.66 sec
+----------------------------------------------------------
+Test Failed.
+"AsianOptionTest.GeometricVsArithmetic" end time: Aug 29 08:44 IST
+"AsianOptionTest.GeometricVsArithmetic" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/30 Testing: AsianOptionTest.ControlVariateEfficiency
+3/30 Test: AsianOptionTest.ControlVariateEfficiency
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=AsianOptionTest.ControlVariateEfficiency" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"AsianOptionTest.ControlVariateEfficiency" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = AsianOptionTest.ControlVariateEfficiency
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from AsianOptionTest
+[ RUN      ] AsianOptionTest.ControlVariateEfficiency
+/Users/funda/Documents/Projects/quant/tests/test_lookback_option.cpp:98: Failure
+Expected: (standardErrorCV) < (standardError), actual: 0 vs 0
+
+/Users/funda/Documents/Projects/quant/tests/test_lookback_option.cpp:99: Failure
+The difference between priceCV and priceStandard is nan, which exceeds 2.0, where
+priceCV evaluates to nan,
+priceStandard evaluates to 0, and
+2.0 evaluates to 2.
+
+[  FAILED  ] AsianOptionTest.ControlVariateEfficiency (77 ms)
+[----------] 1 test from AsianOptionTest (77 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (77 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] AsianOptionTest.ControlVariateEfficiency
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Failed.
+"AsianOptionTest.ControlVariateEfficiency" end time: Aug 29 08:44 IST
+"AsianOptionTest.ControlVariateEfficiency" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/30 Testing: BarrierOptionTest.KnockOutProperties
+4/30 Test: BarrierOptionTest.KnockOutProperties
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=BarrierOptionTest.KnockOutProperties" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"BarrierOptionTest.KnockOutProperties" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = BarrierOptionTest.KnockOutProperties
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BarrierOptionTest
+[ RUN      ] BarrierOptionTest.KnockOutProperties
+[       OK ] BarrierOptionTest.KnockOutProperties (0 ms)
+[----------] 1 test from BarrierOptionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"BarrierOptionTest.KnockOutProperties" end time: Aug 29 08:44 IST
+"BarrierOptionTest.KnockOutProperties" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/30 Testing: BarrierOptionTest.InOutParity
+5/30 Test: BarrierOptionTest.InOutParity
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=BarrierOptionTest.InOutParity" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"BarrierOptionTest.InOutParity" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = BarrierOptionTest.InOutParity
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BarrierOptionTest
+[ RUN      ] BarrierOptionTest.InOutParity
+[       OK ] BarrierOptionTest.InOutParity (950 ms)
+[----------] 1 test from BarrierOptionTest (950 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (950 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.95 sec
+----------------------------------------------------------
+Test Passed.
+"BarrierOptionTest.InOutParity" end time: Aug 29 08:44 IST
+"BarrierOptionTest.InOutParity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/30 Testing: LookbackOptionTest.FixedStrikeProperties
+6/30 Test: LookbackOptionTest.FixedStrikeProperties
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=LookbackOptionTest.FixedStrikeProperties" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"LookbackOptionTest.FixedStrikeProperties" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LookbackOptionTest.FixedStrikeProperties
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LookbackOptionTest
+[ RUN      ] LookbackOptionTest.FixedStrikeProperties
+[       OK ] LookbackOptionTest.FixedStrikeProperties (622 ms)
+[----------] 1 test from LookbackOptionTest (622 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (622 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.63 sec
+----------------------------------------------------------
+Test Passed.
+"LookbackOptionTest.FixedStrikeProperties" end time: Aug 29 08:44 IST
+"LookbackOptionTest.FixedStrikeProperties" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/30 Testing: LookbackOptionTest.FloatingStrikeProperties
+7/30 Test: LookbackOptionTest.FloatingStrikeProperties
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=LookbackOptionTest.FloatingStrikeProperties" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"LookbackOptionTest.FloatingStrikeProperties" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LookbackOptionTest.FloatingStrikeProperties
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LookbackOptionTest
+[ RUN      ] LookbackOptionTest.FloatingStrikeProperties
+[       OK ] LookbackOptionTest.FloatingStrikeProperties (0 ms)
+[----------] 1 test from LookbackOptionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LookbackOptionTest.FloatingStrikeProperties" end time: Aug 29 08:44 IST
+"LookbackOptionTest.FloatingStrikeProperties" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/30 Testing: TwoAssetOptionTest.SpreadOptionProperties
+8/30 Test: TwoAssetOptionTest.SpreadOptionProperties
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=TwoAssetOptionTest.SpreadOptionProperties" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"TwoAssetOptionTest.SpreadOptionProperties" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = TwoAssetOptionTest.SpreadOptionProperties
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TwoAssetOptionTest
+[ RUN      ] TwoAssetOptionTest.SpreadOptionProperties
+/Users/funda/Documents/Projects/quant/tests/test_two_asset_option.cpp:42: Failure
+Expected: (price2) > (price), actual: 1.8511463618018686 vs 2.5184992449332579
+
+[  FAILED  ] TwoAssetOptionTest.SpreadOptionProperties (1134 ms)
+[----------] 1 test from TwoAssetOptionTest (1134 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1134 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] TwoAssetOptionTest.SpreadOptionProperties
+
+ 1 FAILED TEST
+<end of output>
+Test time =   1.14 sec
+----------------------------------------------------------
+Test Failed.
+"TwoAssetOptionTest.SpreadOptionProperties" end time: Aug 29 08:44 IST
+"TwoAssetOptionTest.SpreadOptionProperties" time elapsed: 00:00:01
+----------------------------------------------------------
+
+9/30 Testing: TwoAssetOptionTest.BasketOptionProperties
+9/30 Test: TwoAssetOptionTest.BasketOptionProperties
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=TwoAssetOptionTest.BasketOptionProperties" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"TwoAssetOptionTest.BasketOptionProperties" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = TwoAssetOptionTest.BasketOptionProperties
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TwoAssetOptionTest
+[ RUN      ] TwoAssetOptionTest.BasketOptionProperties
+[       OK ] TwoAssetOptionTest.BasketOptionProperties (549 ms)
+[----------] 1 test from TwoAssetOptionTest (549 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (549 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.55 sec
+----------------------------------------------------------
+Test Passed.
+"TwoAssetOptionTest.BasketOptionProperties" end time: Aug 29 08:44 IST
+"TwoAssetOptionTest.BasketOptionProperties" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/30 Testing: TwoAssetOptionTest.RainbowOptionProperties
+10/30 Test: TwoAssetOptionTest.RainbowOptionProperties
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=TwoAssetOptionTest.RainbowOptionProperties" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"TwoAssetOptionTest.RainbowOptionProperties" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = TwoAssetOptionTest.RainbowOptionProperties
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TwoAssetOptionTest
+[ RUN      ] TwoAssetOptionTest.RainbowOptionProperties
+[       OK ] TwoAssetOptionTest.RainbowOptionProperties (874 ms)
+[----------] 1 test from TwoAssetOptionTest (874 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (874 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.88 sec
+----------------------------------------------------------
+Test Passed.
+"TwoAssetOptionTest.RainbowOptionProperties" end time: Aug 29 08:44 IST
+"TwoAssetOptionTest.RainbowOptionProperties" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/30 Testing: MonteCarloTest.VarianceReduction
+11/30 Test: MonteCarloTest.VarianceReduction
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=MonteCarloTest.VarianceReduction" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"MonteCarloTest.VarianceReduction" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = MonteCarloTest.VarianceReduction
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MonteCarloTest
+[ RUN      ] MonteCarloTest.VarianceReduction
+/Users/funda/Documents/Projects/quant/tests/test_monte_carlo.cpp:29: Failure
+Expected: (width2) < (width1), actual: 0.18186089431242536 vs 0.1815631044240007
+
+/Users/funda/Documents/Projects/quant/tests/test_monte_carlo.cpp:32: Failure
+Value of: price1 >= ci2[0] && price1 <= ci2[1]
+  Actual: false
+Expected: true
+
+/Users/funda/Documents/Projects/quant/tests/test_monte_carlo.cpp:33: Failure
+Value of: price2 >= ci1[0] && price2 <= ci1[1]
+  Actual: false
+Expected: true
+
+[  FAILED  ] MonteCarloTest.VarianceReduction (420 ms)
+[----------] 1 test from MonteCarloTest (420 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (420 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] MonteCarloTest.VarianceReduction
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.43 sec
+----------------------------------------------------------
+Test Failed.
+"MonteCarloTest.VarianceReduction" end time: Aug 29 08:44 IST
+"MonteCarloTest.VarianceReduction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/30 Testing: MonteCarloTest.ImportanceSampling
+12/30 Test: MonteCarloTest.ImportanceSampling
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=MonteCarloTest.ImportanceSampling" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"MonteCarloTest.ImportanceSampling" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = MonteCarloTest.ImportanceSampling
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MonteCarloTest
+[ RUN      ] MonteCarloTest.ImportanceSampling
+/Users/funda/Documents/Projects/quant/tests/test_monte_carlo.cpp:69: Failure
+Value of: price1 >= ci2[0] && price1 <= ci2[1]
+  Actual: false
+Expected: true
+
+/Users/funda/Documents/Projects/quant/tests/test_monte_carlo.cpp:70: Failure
+Value of: price2 >= ci1[0] && price2 <= ci1[1]
+  Actual: false
+Expected: true
+
+/Users/funda/Documents/Projects/quant/tests/test_monte_carlo.cpp:73: Failure
+Expected: (width2) < (width1), actual: 0.45139293454160168 vs 0.18086492102909446
+
+/Users/funda/Documents/Projects/quant/tests/test_monte_carlo.cpp:76: Failure
+The difference between price1 and bs_price is 5.6244889980352628, which exceeds 0.5, where
+price1 evaluates to 10.399620596407269,
+bs_price evaluates to 16.024109594442532, and
+0.5 evaluates to 0.5.
+
+/Users/funda/Documents/Projects/quant/tests/test_monte_carlo.cpp:77: Failure
+The difference between price2 and bs_price is 1.0142468324147416, which exceeds 0.5, where
+price2 evaluates to 17.038356426857273,
+bs_price evaluates to 16.024109594442532, and
+0.5 evaluates to 0.5.
+
+[  FAILED  ] MonteCarloTest.ImportanceSampling (446 ms)
+[----------] 1 test from MonteCarloTest (446 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (446 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] MonteCarloTest.ImportanceSampling
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.45 sec
+----------------------------------------------------------
+Test Failed.
+"MonteCarloTest.ImportanceSampling" end time: Aug 29 08:44 IST
+"MonteCarloTest.ImportanceSampling" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/30 Testing: MonteCarloTest.ControlVariate
+13/30 Test: MonteCarloTest.ControlVariate
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=MonteCarloTest.ControlVariate" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"MonteCarloTest.ControlVariate" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = MonteCarloTest.ControlVariate
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MonteCarloTest
+[ RUN      ] MonteCarloTest.ControlVariate
+/Users/funda/Documents/Projects/quant/tests/test_monte_carlo.cpp:110: Failure
+The difference between price1 and price2 is 10.459725891709788, which exceeds 0.5, where
+price1 evaluates to 10.459725891709788,
+price2 evaluates to 0, and
+0.5 evaluates to 0.5.
+
+/Users/funda/Documents/Projects/quant/tests/test_monte_carlo.cpp:118: Failure
+The difference between price1 and bs_price is 5.5643837027327443, which exceeds 0.5, where
+price1 evaluates to 10.459725891709788,
+bs_price evaluates to 16.024109594442532, and
+0.5 evaluates to 0.5.
+
+/Users/funda/Documents/Projects/quant/tests/test_monte_carlo.cpp:119: Failure
+The difference between price2 and bs_price is 16.024109594442532, which exceeds 0.5, where
+price2 evaluates to 0,
+bs_price evaluates to 16.024109594442532, and
+0.5 evaluates to 0.5.
+
+[  FAILED  ] MonteCarloTest.ControlVariate (539 ms)
+[----------] 1 test from MonteCarloTest (539 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (539 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] MonteCarloTest.ControlVariate
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.54 sec
+----------------------------------------------------------
+Test Failed.
+"MonteCarloTest.ControlVariate" end time: Aug 29 08:44 IST
+"MonteCarloTest.ControlVariate" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/30 Testing: PDESolverTest.EuropeanConvergence
+14/30 Test: PDESolverTest.EuropeanConvergence
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=PDESolverTest.EuropeanConvergence" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"PDESolverTest.EuropeanConvergence" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PDESolverTest.EuropeanConvergence
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PDESolverTest
+[ RUN      ] PDESolverTest.EuropeanConvergence
+[       OK ] PDESolverTest.EuropeanConvergence (1 ms)
+[----------] 1 test from PDESolverTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"PDESolverTest.EuropeanConvergence" end time: Aug 29 08:44 IST
+"PDESolverTest.EuropeanConvergence" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/30 Testing: PDESolverTest.ExplicitEuler
+15/30 Test: PDESolverTest.ExplicitEuler
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=PDESolverTest.ExplicitEuler" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"PDESolverTest.ExplicitEuler" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PDESolverTest.ExplicitEuler
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PDESolverTest
+[ RUN      ] PDESolverTest.ExplicitEuler
+unknown file: Failure
+C++ exception with description "Explicit Euler scheme is unstable. Reduce dt or increase dx." thrown in the test body.
+
+[  FAILED  ] PDESolverTest.ExplicitEuler (0 ms)
+[----------] 1 test from PDESolverTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] PDESolverTest.ExplicitEuler
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"PDESolverTest.ExplicitEuler" end time: Aug 29 08:44 IST
+"PDESolverTest.ExplicitEuler" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/30 Testing: PDESolverTest.AmericanPutEarlyExercise
+16/30 Test: PDESolverTest.AmericanPutEarlyExercise
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=PDESolverTest.AmericanPutEarlyExercise" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"PDESolverTest.AmericanPutEarlyExercise" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PDESolverTest.AmericanPutEarlyExercise
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PDESolverTest
+[ RUN      ] PDESolverTest.AmericanPutEarlyExercise
+/Users/funda/Documents/Projects/quant/tests/test_pde_solver.cpp:76: Failure
+Expected: (american_price) > (european_price), actual: 11.487792433278093 vs 11.487792433278093
+
+/Users/funda/Documents/Projects/quant/tests/test_pde_solver.cpp:79: Failure
+Expected: (american_price - european_price) > (0.5), actual: 0 vs 0.5
+
+[  FAILED  ] PDESolverTest.AmericanPutEarlyExercise (0 ms)
+[----------] 1 test from PDESolverTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] PDESolverTest.AmericanPutEarlyExercise
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"PDESolverTest.AmericanPutEarlyExercise" end time: Aug 29 08:44 IST
+"PDESolverTest.AmericanPutEarlyExercise" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/30 Testing: PDESolverTest.ADIAsianOption
+17/30 Test: PDESolverTest.ADIAsianOption
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=PDESolverTest.ADIAsianOption" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"PDESolverTest.ADIAsianOption" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PDESolverTest.ADIAsianOption
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PDESolverTest
+[ RUN      ] PDESolverTest.ADIAsianOption
+/Users/funda/Documents/Projects/quant/tests/test_pde_solver.cpp:98: Failure
+Expected: (adi_price) < (vanilla_price), actual: 13.79137320660092 vs 10.468319308749949
+
+[  FAILED  ] PDESolverTest.ADIAsianOption (0 ms)
+[----------] 1 test from PDESolverTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] PDESolverTest.ADIAsianOption
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"PDESolverTest.ADIAsianOption" end time: Aug 29 08:44 IST
+"PDESolverTest.ADIAsianOption" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/30 Testing: PDESolverTest.MethodComparison
+18/30 Test: PDESolverTest.MethodComparison
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=PDESolverTest.MethodComparison" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"PDESolverTest.MethodComparison" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PDESolverTest.MethodComparison
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PDESolverTest
+[ RUN      ] PDESolverTest.MethodComparison
+unknown file: Failure
+C++ exception with description "Explicit Euler scheme is unstable. Reduce dt or increase dx." thrown in the test body.
+
+[  FAILED  ] PDESolverTest.MethodComparison (1 ms)
+[----------] 1 test from PDESolverTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] PDESolverTest.MethodComparison
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"PDESolverTest.MethodComparison" end time: Aug 29 08:44 IST
+"PDESolverTest.MethodComparison" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/30 Testing: PDESolverTest.StabilityCheck
+19/30 Test: PDESolverTest.StabilityCheck
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=PDESolverTest.StabilityCheck" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"PDESolverTest.StabilityCheck" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PDESolverTest.StabilityCheck
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PDESolverTest
+[ RUN      ] PDESolverTest.StabilityCheck
+/Users/funda/Documents/Projects/quant/tests/test_pde_solver.cpp:140: Failure
+Expected: { hybrid_pricer::PDESolver solver1(call, 1000, 200); solver1.solveExplicitEuler(); } doesn't throw an exception.
+  Actual: it throws std::runtime_error with description "Explicit Euler scheme is unstable. Reduce dt or increase dx.".
+
+[  FAILED  ] PDESolverTest.StabilityCheck (0 ms)
+[----------] 1 test from PDESolverTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] PDESolverTest.StabilityCheck
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"PDESolverTest.StabilityCheck" end time: Aug 29 08:44 IST
+"PDESolverTest.StabilityCheck" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/30 Testing: PDESolverTest.BoundaryConditions
+20/30 Test: PDESolverTest.BoundaryConditions
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=PDESolverTest.BoundaryConditions" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"PDESolverTest.BoundaryConditions" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PDESolverTest.BoundaryConditions
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PDESolverTest
+[ RUN      ] PDESolverTest.BoundaryConditions
+[       OK ] PDESolverTest.BoundaryConditions (0 ms)
+[----------] 1 test from PDESolverTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PDESolverTest.BoundaryConditions" end time: Aug 29 08:44 IST
+"PDESolverTest.BoundaryConditions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/30 Testing: PDESolverTest.CompareAllMethods
+21/30 Test: PDESolverTest.CompareAllMethods
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=PDESolverTest.CompareAllMethods" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"PDESolverTest.CompareAllMethods" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PDESolverTest.CompareAllMethods
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PDESolverTest
+[ RUN      ] PDESolverTest.CompareAllMethods
+unknown file: Failure
+C++ exception with description "Explicit Euler scheme is unstable. Reduce dt or increase dx." thrown in the test body.
+
+[  FAILED  ] PDESolverTest.CompareAllMethods (0 ms)
+[----------] 1 test from PDESolverTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] PDESolverTest.CompareAllMethods
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"PDESolverTest.CompareAllMethods" end time: Aug 29 08:44 IST
+"PDESolverTest.CompareAllMethods" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/30 Testing: PDESolverTest.HighVolatilityCase
+22/30 Test: PDESolverTest.HighVolatilityCase
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=PDESolverTest.HighVolatilityCase" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"PDESolverTest.HighVolatilityCase" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = PDESolverTest.HighVolatilityCase
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PDESolverTest
+[ RUN      ] PDESolverTest.HighVolatilityCase
+/Users/funda/Documents/Projects/quant/tests/test_pde_solver.cpp:230: Failure
+The difference between cn_price and bs_price is 6.4815277939620124, which exceeds 0.5, where
+cn_price evaluates to 26.339454673028055,
+bs_price evaluates to 32.820982466990067, and
+0.5 evaluates to 0.5.
+
+[  FAILED  ] PDESolverTest.HighVolatilityCase (1 ms)
+[----------] 1 test from PDESolverTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] PDESolverTest.HighVolatilityCase
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"PDESolverTest.HighVolatilityCase" end time: Aug 29 08:44 IST
+"PDESolverTest.HighVolatilityCase" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/30 Testing: SobolTest.FirstDimension
+23/30 Test: SobolTest.FirstDimension
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=SobolTest.FirstDimension" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"SobolTest.FirstDimension" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SobolTest.FirstDimension
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SobolTest
+[ RUN      ] SobolTest.FirstDimension
+/Users/funda/Documents/Projects/quant/tests/test_sobol.cpp:20: Failure
+The difference between point[0] and expected is 0.49999999965075403, which exceeds 1e-6, where
+point[0] evaluates to 3.4924596548080444e-10,
+expected evaluates to 0.5, and
+1e-6 evaluates to 9.9999999999999995e-07.
+
+/Users/funda/Documents/Projects/quant/tests/test_sobol.cpp:20: Failure
+The difference between point[0] and expected is 0.74999999918509275, which exceeds 1e-6, where
+point[0] evaluates to 8.149072527885437e-10,
+expected evaluates to 0.75, and
+1e-6 evaluates to 9.9999999999999995e-07.
+
+/Users/funda/Documents/Projects/quant/tests/test_sobol.cpp:20: Failure
+The difference between point[0] and expected is 0.24999999941792339, which exceeds 1e-6, where
+point[0] evaluates to 5.8207660913467407e-10,
+expected evaluates to 0.25, and
+1e-6 evaluates to 9.9999999999999995e-07.
+
+/Users/funda/Documents/Projects/quant/tests/test_sobol.cpp:20: Failure
+The difference between point[0] and expected is 0.37499999848660082, which exceeds 1e-6, where
+point[0] evaluates to 1.5133991837501526e-09,
+expected evaluates to 0.375, and
+1e-6 evaluates to 9.9999999999999995e-07.
+
+/Users/funda/Documents/Projects/quant/tests/test_sobol.cpp:20: Failure
+The difference between point[0] and expected is 0.87499999825377017, which exceeds 1e-6, where
+point[0] evaluates to 1.7462298274040222e-09,
+expected evaluates to 0.875, and
+1e-6 evaluates to 9.9999999999999995e-07.
+
+/Users/funda/Documents/Projects/quant/tests/test_sobol.cpp:20: Failure
+The difference between point[0] and expected is 0.62499999871943146, which exceeds 1e-6, where
+point[0] evaluates to 1.280568540096283e-09,
+expected evaluates to 0.625, and
+1e-6 evaluates to 9.9999999999999995e-07.
+
+/Users/funda/Documents/Projects/quant/tests/test_sobol.cpp:20: Failure
+The difference between point[0] and expected is 0.1249999989522621, which exceeds 1e-6, where
+point[0] evaluates to 1.0477378964424133e-09,
+expected evaluates to 0.125, and
+1e-6 evaluates to 9.9999999999999995e-07.
+
+[  FAILED  ] SobolTest.FirstDimension (0 ms)
+[----------] 1 test from SobolTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SobolTest.FirstDimension
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"SobolTest.FirstDimension" end time: Aug 29 08:44 IST
+"SobolTest.FirstDimension" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/30 Testing: SobolTest.Dimensionality
+24/30 Test: SobolTest.Dimensionality
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=SobolTest.Dimensionality" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"SobolTest.Dimensionality" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SobolTest.Dimensionality
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SobolTest
+[ RUN      ] SobolTest.Dimensionality
+[       OK ] SobolTest.Dimensionality (0 ms)
+[----------] 1 test from SobolTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SobolTest.Dimensionality" end time: Aug 29 08:44 IST
+"SobolTest.Dimensionality" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/30 Testing: SobolTest.SequenceUniformity
+25/30 Test: SobolTest.SequenceUniformity
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=SobolTest.SequenceUniformity" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"SobolTest.SequenceUniformity" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SobolTest.SequenceUniformity
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SobolTest
+[ RUN      ] SobolTest.SequenceUniformity
+/Users/funda/Documents/Projects/quant/tests/test_sobol.cpp:50: Failure
+The difference between mean and 0.5 is 0.4999998807469383, which exceeds 0.05, where
+mean evaluates to 1.1925306171178817e-07,
+0.5 evaluates to 0.5, and
+0.05 evaluates to 0.050000000000000003.
+
+/Users/funda/Documents/Projects/quant/tests/test_sobol.cpp:54: Failure
+The difference between variance and 1.0/12.0 is 0.083333333333328499, which exceeds 0.05, where
+variance evaluates to 4.836076561778868e-15,
+1.0/12.0 evaluates to 0.083333333333333329, and
+0.05 evaluates to 0.050000000000000003.
+
+[  FAILED  ] SobolTest.SequenceUniformity (0 ms)
+[----------] 1 test from SobolTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SobolTest.SequenceUniformity
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"SobolTest.SequenceUniformity" end time: Aug 29 08:44 IST
+"SobolTest.SequenceUniformity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/30 Testing: SobolPricingTest.EuropeanCallOption
+26/30 Test: SobolPricingTest.EuropeanCallOption
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=SobolPricingTest.EuropeanCallOption" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"SobolPricingTest.EuropeanCallOption" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SobolPricingTest.EuropeanCallOption
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SobolPricingTest
+[ RUN      ] SobolPricingTest.EuropeanCallOption
+unknown file: Failure
+C++ exception with description "Invalid Sobol sequence dimension" thrown in the test body.
+
+[  FAILED  ] SobolPricingTest.EuropeanCallOption (0 ms)
+[----------] 1 test from SobolPricingTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SobolPricingTest.EuropeanCallOption
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"SobolPricingTest.EuropeanCallOption" end time: Aug 29 08:44 IST
+"SobolPricingTest.EuropeanCallOption" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/30 Testing: SobolPricingTest.AsianOption
+27/30 Test: SobolPricingTest.AsianOption
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=SobolPricingTest.AsianOption" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"SobolPricingTest.AsianOption" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = SobolPricingTest.AsianOption
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SobolPricingTest
+[ RUN      ] SobolPricingTest.AsianOption
+[       OK ] SobolPricingTest.AsianOption (0 ms)
+[----------] 1 test from SobolPricingTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SobolPricingTest.AsianOption" end time: Aug 29 08:44 IST
+"SobolPricingTest.AsianOption" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/30 Testing: GPUTest.CompareWithCPU
+28/30 Test: GPUTest.CompareWithCPU
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=GPUTest.CompareWithCPU" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"GPUTest.CompareWithCPU" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = GPUTest.CompareWithCPU
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GPUTest
+[ RUN      ] GPUTest.CompareWithCPU
+UNSUPPORTED (log once): buildComputeProgram: cl2Metal failed
+unknown file: Failure
+C++ exception with description "Failed to build program: program_source:41:27: error: call to 'fmax' is ambiguous
+        const double u1 = fmax(sobol[sobolOffset + 2*i], 1.0e-10);
+                          ^~~~
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7153:21: note: candidate function
+float __ovld __cnfn fmax(float, float);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7159:22: note: candidate function
+float2 __ovld __cnfn fmax(float2, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7160:22: note: candidate function
+float3 __ovld __cnfn fmax(float3, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7161:22: note: candidate function
+float4 __ovld __cnfn fmax(float4, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7162:22: note: candidate function
+float8 __ovld __cnfn fmax(float8, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7163:23: note: candidate function
+float16 __ovld __cnfn fmax(float16, float);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7165:22: note: candidate function
+double __ovld __cnfn fmax(double, double);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7171:23: note: candidate function
+double2 __ovld __cnfn fmax(double2, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7172:23: note: candidate function
+double3 __ovld __cnfn fmax(double3, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7173:23: note: candidate function
+double4 __ovld __cnfn fmax(double4, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7174:23: note: candidate function
+double8 __ovld __cnfn fmax(double8, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7175:24: note: candidate function
+double16 __ovld __cnfn fmax(double16, double);
+                       ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7178:20: note: candidate function
+half __ovld __cnfn fmax(half, half);
+                   ^
+program_source:74:22: error: call to 'fmax' is ambiguous
+            payoff = fmax(paths[pathOffset + numSteps] - strike, 0.0);
+                     ^~~~
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7153:21: note: candidate function
+float __ovld __cnfn fmax(float, float);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7159:22: note: candidate function
+float2 __ovld __cnfn fmax(float2, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7160:22: note: candidate function
+float3 __ovld __cnfn fmax(float3, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7161:22: note: candidate function
+float4 __ovld __cnfn fmax(float4, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7162:22: note: candidate function
+float8 __ovld __cnfn fmax(float8, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7163:23: note: candidate function
+float16 __ovld __cnfn fmax(float16, float);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7165:22: note: candidate function
+double __ovld __cnfn fmax(double, double);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7171:23: note: candidate function
+double2 __ovld __cnfn fmax(double2, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7172:23: note: candidate function
+double3 __ovld __cnfn fmax(double3, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7173:23: note: candidate function
+double4 __ovld __cnfn fmax(double4, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7174:23: note: candidate function
+double8 __ovld __cnfn fmax(double8, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7175:24: note: candidate function
+double16 __ovld __cnfn fmax(double16, double);
+                       ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7178:20: note: candidate function
+half __ovld __cnfn fmax(half, half);
+                   ^
+program_source:88:22: error: call to 'fmax' is ambiguous
+            payoff = fmax(avg - strike, 0.0);
+                     ^~~~
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7153:21: note: candidate function
+float __ovld __cnfn fmax(float, float);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7159:22: note: candidate function
+float2 __ovld __cnfn fmax(float2, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7160:22: note: candidate function
+float3 __ovld __cnfn fmax(float3, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7161:22: note: candidate function
+float4 __ovld __cnfn fmax(float4, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7162:22: note: candidate function
+float8 __ovld __cnfn fmax(float8, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7163:23: note: candidate function
+float16 __ovld __cnfn fmax(float16, float);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7165:22: note: candidate function
+double __ovld __cnfn fmax(double, double);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7171:23: note: candidate function
+double2 __ovld __cnfn fmax(double2, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7172:23: note: candidate function
+double3 __ovld __cnfn fmax(double3, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7173:23: note: candidate function
+double4 __ovld __cnfn fmax(double4, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7174:23: note: candidate function
+double8 __ovld __cnfn fmax(double8, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7175:24: note: candidate function
+double16 __ovld __cnfn fmax(double16, double);
+                       ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7178:20: note: candidate function
+half __ovld __cnfn fmax(half, half);
+                   ^
+program_source:101:26: error: call to 'fmax' is ambiguous
+                payoff = fmax(paths[pathOffset + numSteps] - strike, 0.0);
+                         ^~~~
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7153:21: note: candidate function
+float __ovld __cnfn fmax(float, float);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7159:22: note: candidate function
+float2 __ovld __cnfn fmax(float2, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7160:22: note: candidate function
+float3 __ovld __cnfn fmax(float3, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7161:22: note: candidate function
+float4 __ovld __cnfn fmax(float4, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7162:22: note: candidate function
+float8 __ovld __cnfn fmax(float8, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7163:23: note: candidate function
+float16 __ovld __cnfn fmax(float16, float);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7165:22: note: candidate function
+double __ovld __cnfn fmax(double, double);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7171:23: note: candidate function
+double2 __ovld __cnfn fmax(double2, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7172:23: note: candidate function
+double3 __ovld __cnfn fmax(double3, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7173:23: note: candidate function
+double4 __ovld __cnfn fmax(double4, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7174:23: note: candidate function
+double8 __ovld __cnfn fmax(double8, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7175:24: note: candidate function
+double16 __ovld __cnfn fmax(double16, double);
+                       ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7178:20: note: candidate function
+half __ovld __cnfn fmax(half, half);
+                   ^
+" thrown in the test body.
+
+[  FAILED  ] GPUTest.CompareWithCPU (2834 ms)
+[----------] 1 test from GPUTest (2834 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2834 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] GPUTest.CompareWithCPU
+
+ 1 FAILED TEST
+<end of output>
+Test time =   2.84 sec
+----------------------------------------------------------
+Test Failed.
+"GPUTest.CompareWithCPU" end time: Aug 29 08:44 IST
+"GPUTest.CompareWithCPU" time elapsed: 00:00:02
+----------------------------------------------------------
+
+29/30 Testing: GPUTest.AsianOption
+29/30 Test: GPUTest.AsianOption
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=GPUTest.AsianOption" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"GPUTest.AsianOption" start time: Aug 29 08:44 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = GPUTest.AsianOption
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GPUTest
+[ RUN      ] GPUTest.AsianOption
+UNSUPPORTED (log once): buildComputeProgram: cl2Metal failed
+unknown file: Failure
+C++ exception with description "Failed to build program: program_source:41:27: error: call to 'fmax' is ambiguous
+        const double u1 = fmax(sobol[sobolOffset + 2*i], 1.0e-10);
+                          ^~~~
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7153:21: note: candidate function
+float __ovld __cnfn fmax(float, float);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7159:22: note: candidate function
+float2 __ovld __cnfn fmax(float2, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7160:22: note: candidate function
+float3 __ovld __cnfn fmax(float3, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7161:22: note: candidate function
+float4 __ovld __cnfn fmax(float4, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7162:22: note: candidate function
+float8 __ovld __cnfn fmax(float8, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7163:23: note: candidate function
+float16 __ovld __cnfn fmax(float16, float);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7165:22: note: candidate function
+double __ovld __cnfn fmax(double, double);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7171:23: note: candidate function
+double2 __ovld __cnfn fmax(double2, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7172:23: note: candidate function
+double3 __ovld __cnfn fmax(double3, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7173:23: note: candidate function
+double4 __ovld __cnfn fmax(double4, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7174:23: note: candidate function
+double8 __ovld __cnfn fmax(double8, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7175:24: note: candidate function
+double16 __ovld __cnfn fmax(double16, double);
+                       ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7178:20: note: candidate function
+half __ovld __cnfn fmax(half, half);
+                   ^
+program_source:74:22: error: call to 'fmax' is ambiguous
+            payoff = fmax(paths[pathOffset + numSteps] - strike, 0.0);
+                     ^~~~
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7153:21: note: candidate function
+float __ovld __cnfn fmax(float, float);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7159:22: note: candidate function
+float2 __ovld __cnfn fmax(float2, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7160:22: note: candidate function
+float3 __ovld __cnfn fmax(float3, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7161:22: note: candidate function
+float4 __ovld __cnfn fmax(float4, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7162:22: note: candidate function
+float8 __ovld __cnfn fmax(float8, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7163:23: note: candidate function
+float16 __ovld __cnfn fmax(float16, float);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7165:22: note: candidate function
+double __ovld __cnfn fmax(double, double);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7171:23: note: candidate function
+double2 __ovld __cnfn fmax(double2, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7172:23: note: candidate function
+double3 __ovld __cnfn fmax(double3, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7173:23: note: candidate function
+double4 __ovld __cnfn fmax(double4, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7174:23: note: candidate function
+double8 __ovld __cnfn fmax(double8, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7175:24: note: candidate function
+double16 __ovld __cnfn fmax(double16, double);
+                       ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7178:20: note: candidate function
+half __ovld __cnfn fmax(half, half);
+                   ^
+program_source:88:22: error: call to 'fmax' is ambiguous
+            payoff = fmax(avg - strike, 0.0);
+                     ^~~~
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7153:21: note: candidate function
+float __ovld __cnfn fmax(float, float);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7159:22: note: candidate function
+float2 __ovld __cnfn fmax(float2, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7160:22: note: candidate function
+float3 __ovld __cnfn fmax(float3, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7161:22: note: candidate function
+float4 __ovld __cnfn fmax(float4, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7162:22: note: candidate function
+float8 __ovld __cnfn fmax(float8, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7163:23: note: candidate function
+float16 __ovld __cnfn fmax(float16, float);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7165:22: note: candidate function
+double __ovld __cnfn fmax(double, double);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7171:23: note: candidate function
+double2 __ovld __cnfn fmax(double2, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7172:23: note: candidate function
+double3 __ovld __cnfn fmax(double3, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7173:23: note: candidate function
+double4 __ovld __cnfn fmax(double4, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7174:23: note: candidate function
+double8 __ovld __cnfn fmax(double8, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7175:24: note: candidate function
+double16 __ovld __cnfn fmax(double16, double);
+                       ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7178:20: note: candidate function
+half __ovld __cnfn fmax(half, half);
+                   ^
+program_source:101:26: error: call to 'fmax' is ambiguous
+                payoff = fmax(paths[pathOffset + numSteps] - strike, 0.0);
+                         ^~~~
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7153:21: note: candidate function
+float __ovld __cnfn fmax(float, float);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7159:22: note: candidate function
+float2 __ovld __cnfn fmax(float2, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7160:22: note: candidate function
+float3 __ovld __cnfn fmax(float3, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7161:22: note: candidate function
+float4 __ovld __cnfn fmax(float4, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7162:22: note: candidate function
+float8 __ovld __cnfn fmax(float8, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7163:23: note: candidate function
+float16 __ovld __cnfn fmax(float16, float);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7165:22: note: candidate function
+double __ovld __cnfn fmax(double, double);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7171:23: note: candidate function
+double2 __ovld __cnfn fmax(double2, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7172:23: note: candidate function
+double3 __ovld __cnfn fmax(double3, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7173:23: note: candidate function
+double4 __ovld __cnfn fmax(double4, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7174:23: note: candidate function
+double8 __ovld __cnfn fmax(double8, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7175:24: note: candidate function
+double16 __ovld __cnfn fmax(double16, double);
+                       ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7178:20: note: candidate function
+half __ovld __cnfn fmax(half, half);
+                   ^
+" thrown in the test body.
+
+[  FAILED  ] GPUTest.AsianOption (2289 ms)
+[----------] 1 test from GPUTest (2289 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2289 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] GPUTest.AsianOption
+
+ 1 FAILED TEST
+<end of output>
+Test time =   2.30 sec
+----------------------------------------------------------
+Test Failed.
+"GPUTest.AsianOption" end time: Aug 29 08:45 IST
+"GPUTest.AsianOption" time elapsed: 00:00:02
+----------------------------------------------------------
+
+30/30 Testing: GPUTest.BarrierOption
+30/30 Test: GPUTest.BarrierOption
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=GPUTest.BarrierOption" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"GPUTest.BarrierOption" start time: Aug 29 08:45 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = GPUTest.BarrierOption
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GPUTest
+[ RUN      ] GPUTest.BarrierOption
+UNSUPPORTED (log once): buildComputeProgram: cl2Metal failed
+unknown file: Failure
+C++ exception with description "Failed to build program: program_source:41:27: error: call to 'fmax' is ambiguous
+        const double u1 = fmax(sobol[sobolOffset + 2*i], 1.0e-10);
+                          ^~~~
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7153:21: note: candidate function
+float __ovld __cnfn fmax(float, float);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7159:22: note: candidate function
+float2 __ovld __cnfn fmax(float2, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7160:22: note: candidate function
+float3 __ovld __cnfn fmax(float3, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7161:22: note: candidate function
+float4 __ovld __cnfn fmax(float4, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7162:22: note: candidate function
+float8 __ovld __cnfn fmax(float8, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7163:23: note: candidate function
+float16 __ovld __cnfn fmax(float16, float);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7165:22: note: candidate function
+double __ovld __cnfn fmax(double, double);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7171:23: note: candidate function
+double2 __ovld __cnfn fmax(double2, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7172:23: note: candidate function
+double3 __ovld __cnfn fmax(double3, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7173:23: note: candidate function
+double4 __ovld __cnfn fmax(double4, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7174:23: note: candidate function
+double8 __ovld __cnfn fmax(double8, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7175:24: note: candidate function
+double16 __ovld __cnfn fmax(double16, double);
+                       ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7178:20: note: candidate function
+half __ovld __cnfn fmax(half, half);
+                   ^
+program_source:74:22: error: call to 'fmax' is ambiguous
+            payoff = fmax(paths[pathOffset + numSteps] - strike, 0.0);
+                     ^~~~
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7153:21: note: candidate function
+float __ovld __cnfn fmax(float, float);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7159:22: note: candidate function
+float2 __ovld __cnfn fmax(float2, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7160:22: note: candidate function
+float3 __ovld __cnfn fmax(float3, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7161:22: note: candidate function
+float4 __ovld __cnfn fmax(float4, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7162:22: note: candidate function
+float8 __ovld __cnfn fmax(float8, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7163:23: note: candidate function
+float16 __ovld __cnfn fmax(float16, float);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7165:22: note: candidate function
+double __ovld __cnfn fmax(double, double);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7171:23: note: candidate function
+double2 __ovld __cnfn fmax(double2, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7172:23: note: candidate function
+double3 __ovld __cnfn fmax(double3, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7173:23: note: candidate function
+double4 __ovld __cnfn fmax(double4, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7174:23: note: candidate function
+double8 __ovld __cnfn fmax(double8, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7175:24: note: candidate function
+double16 __ovld __cnfn fmax(double16, double);
+                       ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7178:20: note: candidate function
+half __ovld __cnfn fmax(half, half);
+                   ^
+program_source:88:22: error: call to 'fmax' is ambiguous
+            payoff = fmax(avg - strike, 0.0);
+                     ^~~~
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7153:21: note: candidate function
+float __ovld __cnfn fmax(float, float);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7159:22: note: candidate function
+float2 __ovld __cnfn fmax(float2, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7160:22: note: candidate function
+float3 __ovld __cnfn fmax(float3, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7161:22: note: candidate function
+float4 __ovld __cnfn fmax(float4, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7162:22: note: candidate function
+float8 __ovld __cnfn fmax(float8, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7163:23: note: candidate function
+float16 __ovld __cnfn fmax(float16, float);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7165:22: note: candidate function
+double __ovld __cnfn fmax(double, double);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7171:23: note: candidate function
+double2 __ovld __cnfn fmax(double2, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7172:23: note: candidate function
+double3 __ovld __cnfn fmax(double3, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7173:23: note: candidate function
+double4 __ovld __cnfn fmax(double4, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7174:23: note: candidate function
+double8 __ovld __cnfn fmax(double8, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7175:24: note: candidate function
+double16 __ovld __cnfn fmax(double16, double);
+                       ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7178:20: note: candidate function
+half __ovld __cnfn fmax(half, half);
+                   ^
+program_source:101:26: error: call to 'fmax' is ambiguous
+                payoff = fmax(paths[pathOffset + numSteps] - strike, 0.0);
+                         ^~~~
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7153:21: note: candidate function
+float __ovld __cnfn fmax(float, float);
+                    ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7159:22: note: candidate function
+float2 __ovld __cnfn fmax(float2, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7160:22: note: candidate function
+float3 __ovld __cnfn fmax(float3, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7161:22: note: candidate function
+float4 __ovld __cnfn fmax(float4, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7162:22: note: candidate function
+float8 __ovld __cnfn fmax(float8, float);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7163:23: note: candidate function
+float16 __ovld __cnfn fmax(float16, float);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7165:22: note: candidate function
+double __ovld __cnfn fmax(double, double);
+                     ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7171:23: note: candidate function
+double2 __ovld __cnfn fmax(double2, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7172:23: note: candidate function
+double3 __ovld __cnfn fmax(double3, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7173:23: note: candidate function
+double4 __ovld __cnfn fmax(double4, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7174:23: note: candidate function
+double8 __ovld __cnfn fmax(double8, double);
+                      ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7175:24: note: candidate function
+double16 __ovld __cnfn fmax(double16, double);
+                       ^
+/System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/lib/clang/32023.622/include/opencl-c.h:7178:20: note: candidate function
+half __ovld __cnfn fmax(half, half);
+                   ^
+" thrown in the test body.
+
+[  FAILED  ] GPUTest.BarrierOption (2284 ms)
+[----------] 1 test from GPUTest (2284 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2284 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] GPUTest.BarrierOption
+
+ 1 FAILED TEST
+<end of output>
+Test time =   2.29 sec
+----------------------------------------------------------
+Test Failed.
+"GPUTest.BarrierOption" end time: Aug 29 08:45 IST
+"GPUTest.BarrierOption" time elapsed: 00:00:02
+----------------------------------------------------------
+
+End testing: Aug 29 08:45 IST

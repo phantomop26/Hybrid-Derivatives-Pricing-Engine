@@ -1,0 +1,11 @@
+{
+    "option": "asian_arithmetic",
+    "method": "montecarlo",
+    "strike": 100.0,
+    "spot": 100.0,
+    "maturity": 1.0,
+    "volatility": 0.2,
+    "rate": 0.05,
+    "paths": 1000000,
+    "steps": 252
+}

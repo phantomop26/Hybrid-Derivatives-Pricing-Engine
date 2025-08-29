@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Project",
+            "type": "shell",
+            "command": "mkdir -p build && cd build && cmake .. && make -j",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "pattern": [{
+                    "regexp": "^(?:\\s+)?(?:In file included from\\s+)?([^:]*)(?::|\\()([0-9]+)(?::|\\)|,)(?:([0-9]+):)?\\s+(?:fatal\\s+)?(error|warning|note):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }]
+            }
+        },
+
+        {
+            "label": "Run Tests",
+            "type": "shell",
+            "command": "cd build && ctest --output-on-failure",
+            "group": "test",
+            "dependsOn": ["Build Project"]
+        }
+    ]
+}

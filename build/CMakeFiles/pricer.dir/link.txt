@@ -1,0 +1,1 @@
+/usr/bin/c++  -Xpreprocessor -fopenmp -O3 -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/pricer.dir/src/main.cpp.o -o pricer  libhybridpricer.a /Users/funda/homebrew/opt/libomp/lib/libomp.dylib -lOpenCL::OpenCL

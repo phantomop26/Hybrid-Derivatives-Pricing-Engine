@@ -1,0 +1,306 @@
+#include "pde_solver.hpp"
+#include <cmath>
+#include <algorithm>
+#include <vector>
+#include <stdexcept>
+
+namespace hybrid_pricer {
+
+using std::vector;
+using std::max;
+using std::exp;
+
+void PDESolver::setupGrid() {
+    // Set up initial condition at maturity
+    double dx = 4.0 * option_->spot / numSpaceSteps_;
+    for (size_t i = 0; i < numSpaceSteps_; ++i) {
+        double S = i * dx;
+        grid_[numTimeSteps_ - 1][i] = option_->payoff({S});
+    }
+    
+    // Set boundary conditions
+    setBoundaryConditions();
+}
+
+void PDESolver::setBoundaryConditions() {
+    double dt = option_->timeToMaturity / numTimeSteps_;
+    double r = option_->riskFreeRate;
+    
+    // Lower boundary (S = 0)
+    for (size_t t = 0; t < numTimeSteps_; ++t) {
+        grid_[t][0] = 0.0;  // For call options
+    }
+    
+    // Upper boundary
+    double maxS = 4.0 * option_->spot;
+    for (size_t t = 0; t < numTimeSteps_; ++t) {
+        grid_[t][numSpaceSteps_ - 1] = maxS - option_->strike * exp(-r * (numTimeSteps_ - 1 - t) * dt);
+    }
+}
+
+PDESolver::PDESolver(std::shared_ptr<Option> option, size_t numTimeSteps, size_t numSpaceSteps)
+    : option_(option), numTimeSteps_(numTimeSteps), numSpaceSteps_(numSpaceSteps) {
+    grid_.resize(numTimeSteps_);
+    for (auto& row : grid_) {
+        row.resize(numSpaceSteps_);
+    }
+    setupGrid();
+}
+
+void thomasAlgorithm(const std::vector<double>& a, const std::vector<double>& b, 
+                     const std::vector<double>& c, std::vector<double>& x,
+                     const std::vector<double>& d) {
+    size_t n = d.size();
+    std::vector<double> c_star(n, 0.0);
+    std::vector<double> d_star(n, 0.0);
+    
+    // Forward sweep
+    c_star[0] = c[0] / b[0];
+    d_star[0] = d[0] / b[0];
+    
+    for (size_t i = 1; i < n; i++) {
+        double m = 1.0 / (b[i] - a[i] * c_star[i-1]);
+        c_star[i] = c[i] * m;
+        d_star[i] = (d[i] - a[i] * d_star[i-1]) * m;
+    }
+    
+    // Back substitution
+    x[n-1] = d_star[n-1];
+    for (size_t i = n-2; i < n; i--) {
+        x[i] = d_star[i] - c_star[i] * x[i+1];
+    }
+}
+
+double PDESolver::solveCrankNicolson() {
+    double dt = option_->maturity / numTimeSteps_;
+    double dx = 4.0 * option_->spot / numSpaceSteps_;
+    double r = option_->riskFreeRate;
+    double sigma = option_->volatility;
+    
+    // Set up tridiagonal system matrices
+    std::vector<double> a(numSpaceSteps_), b(numSpaceSteps_), c(numSpaceSteps_);
+    std::vector<double> rhs(numSpaceSteps_);
+    
+    // Time stepping
+    for (size_t t = numTimeSteps_ - 1; t > 0; --t) {
+        // Set up coefficients
+        for (size_t i = 1; i < numSpaceSteps_ - 1; ++i) {
+            double S = i * dx;
+            double alpha = 0.25 * dt * (sigma * sigma * S * S / (dx * dx));
+            double beta = 0.25 * dt * r * S / dx;
+            
+            a[i] = -alpha + beta;
+            b[i] = 1.0 + 2.0 * alpha + dt * r;
+            c[i] = -alpha - beta;
+            
+            // Right hand side
+            rhs[i] = grid_[t][i] * (1.0 - 2.0 * alpha - dt * r) +
+                     (alpha - beta) * grid_[t][i-1] +
+                     (alpha + beta) * grid_[t][i+1];
+        }
+        
+        // Apply boundary conditions
+        rhs[0] = grid_[t-1][0];
+        rhs[numSpaceSteps_-1] = grid_[t-1][numSpaceSteps_-1];
+        
+        // Solve tridiagonal system
+        thomasAlgorithm(a, b, c, grid_[t-1], rhs);
+    }
+    
+    // Return interpolated value at spot price
+    size_t idx = static_cast<size_t>(option_->spot / dx);
+    double lambda = (option_->spot - idx * dx) / dx;
+    return (1.0 - lambda) * grid_[0][idx] + lambda * grid_[0][idx + 1];
+}
+
+double PDESolver::solveExplicitEuler() {
+    double dt = option_->maturity / numTimeSteps_;
+    double dx = 4.0 * option_->spot / numSpaceSteps_;
+    double r = option_->riskFreeRate;
+    double sigma = option_->volatility;
+    
+    // Check stability condition
+    double stability = (sigma * sigma * dt) / (dx * dx);
+    if (stability > 0.5) {
+        throw std::runtime_error("Explicit scheme stability condition not met. Reduce dt or increase dx.");
+    }
+    
+    // Time stepping
+    for (size_t t = numTimeSteps_ - 1; t > 0; --t) {
+        #pragma omp parallel for
+        for (size_t i = 1; i < numSpaceSteps_ - 1; ++i) {
+            double S = i * dx;
+            double alpha = 0.5 * dt * (sigma * sigma * S * S / (dx * dx));
+            double beta = 0.5 * dt * r * S / dx;
+            
+            grid_[t-1][i] = (1.0 - 2.0 * alpha - r * dt) * grid_[t][i] +
+                           (alpha + beta) * grid_[t][i+1] +
+                           (alpha - beta) * grid_[t][i-1];
+        }
+        
+        // Apply boundary conditions
+        grid_[t-1][0] = 0.0;  // For call options
+        grid_[t-1][numSpaceSteps_-1] = 4.0 * option_->spot - 
+            option_->strike * exp(-r * (t-1) * dt);
+    }
+    
+    // Return interpolated value at spot price
+    size_t idx = static_cast<size_t>(option_->spot / dx);
+    double lambda = (option_->spot - idx * dx) / dx;
+    return (1.0 - lambda) * grid_[0][idx] + lambda * grid_[0][idx + 1];
+}
+
+double PDESolver::solveADI() {
+    double dt = option_->maturity / numTimeSteps_;
+    double dx = 4.0 * option_->spot / numSpaceSteps_;
+    double r = option_->riskFreeRate;
+    double sigma = option_->volatility;
+    
+    // For 2D grid, we need a second dimension for path-dependent options
+    std::vector<std::vector<std::vector<double>>> grid3d(
+        numTimeSteps_,
+        std::vector<std::vector<double>>(
+            numSpaceSteps_,
+            std::vector<double>(numSpaceSteps_)
+        )
+    );
+    
+    // Initialize terminal conditions
+    for (size_t i = 0; i < numSpaceSteps_; ++i) {
+        for (size_t j = 0; j < numSpaceSteps_; ++j) {
+            double S = i * dx;
+            double A = j * dx;  // Average price for Asian options
+            grid3d[numTimeSteps_-1][i][j] = option_->payoff({S, A});
+        }
+    }
+    
+    // Temporary vectors for solving tridiagonal systems
+    std::vector<double> a(numSpaceSteps_), b(numSpaceSteps_), c(numSpaceSteps_);
+    std::vector<double> rhs(numSpaceSteps_);
+    std::vector<double> solution(numSpaceSteps_);
+    
+    // Time stepping
+    for (size_t t = numTimeSteps_ - 1; t > 0; --t) {
+        // First sweep - implicit in S direction
+        #pragma omp parallel for
+        for (size_t j = 1; j < numSpaceSteps_ - 1; ++j) {
+            for (size_t i = 1; i < numSpaceSteps_ - 1; ++i) {
+                double S = i * dx;
+                double alpha = 0.25 * dt * (sigma * sigma * S * S / (dx * dx));
+                double beta = 0.25 * dt * r * S / dx;
+                
+                a[i] = -alpha + beta;
+                b[i] = 1.0 + 2.0 * alpha + 0.5 * dt * r;
+                c[i] = -alpha - beta;
+                
+                rhs[i] = grid3d[t][i][j];
+            }
+            
+            // Solve tridiagonal system
+            thomasAlgorithm(a, b, c, solution, rhs);
+            
+            // Update intermediate solution
+            for (size_t i = 0; i < numSpaceSteps_; ++i) {
+                grid3d[t-1][i][j] = solution[i];
+            }
+        }
+        
+        // Second sweep - implicit in A direction
+        #pragma omp parallel for
+        for (size_t i = 1; i < numSpaceSteps_ - 1; ++i) {
+            for (size_t j = 1; j < numSpaceSteps_ - 1; ++j) {
+                double S = i * dx;
+                double alpha = 0.25 * dt / (dx * dx);  // Simplified coefficient for average dimension
+                
+                a[j] = -alpha;
+                b[j] = 1.0 + 2.0 * alpha;
+                c[j] = -alpha;
+                
+                rhs[j] = grid3d[t-1][i][j];
+            }
+            
+            // Solve tridiagonal system
+            thomasAlgorithm(a, b, c, solution, rhs);
+            
+            // Update final solution for this time step
+            for (size_t j = 0; j < numSpaceSteps_; ++j) {
+                grid3d[t-1][i][j] = solution[j];
+            }
+        }
+        
+        // Apply boundary conditions
+        for (size_t j = 0; j < numSpaceSteps_; ++j) {
+            grid3d[t-1][0][j] = 0.0;  // S = 0 boundary
+            grid3d[t-1][numSpaceSteps_-1][j] = 4.0 * option_->spot - 
+                option_->strike * exp(-r * (t-1) * dt);  // S = Smax boundary
+        }
+    }
+    
+    // Return interpolated value at spot price and initial average
+    size_t idx_s = static_cast<size_t>(option_->spot / dx);
+    size_t idx_a = static_cast<size_t>(option_->spot / dx);  // Initial average equals spot
+    double lambda_s = (option_->spot - idx_s * dx) / dx;
+    double lambda_a = (option_->spot - idx_a * dx) / dx;
+    
+    double v00 = grid3d[0][idx_s][idx_a];
+    double v10 = grid3d[0][idx_s+1][idx_a];
+    double v01 = grid3d[0][idx_s][idx_a+1];
+    double v11 = grid3d[0][idx_s+1][idx_a+1];
+    
+    // Bilinear interpolation
+    return (1.0 - lambda_s) * (1.0 - lambda_a) * v00 +
+           lambda_s * (1.0 - lambda_a) * v10 +
+           (1.0 - lambda_s) * lambda_a * v01 +
+           lambda_s * lambda_a * v11;
+}
+
+double PDESolver::solveWithFreeBoundary() {
+    double dt = option_->maturity / numTimeSteps_;
+    double dx = 4.0 * option_->spot / numSpaceSteps_;
+    double r = option_->riskFreeRate;
+    double sigma = option_->volatility;
+    
+    // Set up tridiagonal system matrices
+    std::vector<double> a(numSpaceSteps_), b(numSpaceSteps_), c(numSpaceSteps_);
+    std::vector<double> rhs(numSpaceSteps_);
+    std::vector<double> solution(numSpaceSteps_);
+    
+    // Create a copy of the grid for the projected solution
+    auto projected_grid = grid_;
+    
+    // Time stepping
+    for (size_t t = numTimeSteps_ - 1; t > 0; --t) {
+        // First solve the unconstrained problem using Crank-Nicolson
+        for (size_t i = 1; i < numSpaceSteps_ - 1; ++i) {
+            double S = i * dx;
+            double alpha = 0.25 * dt * (sigma * sigma * S * S / (dx * dx));
+            double beta = 0.25 * dt * r * S / dx;
+            
+            a[i] = -alpha + beta;
+            b[i] = 1.0 + 2.0 * alpha + dt * r;
+            c[i] = -alpha - beta;
+            
+            rhs[i] = grid_[t][i] * (1.0 - 2.0 * alpha - dt * r) +
+                     (alpha - beta) * grid_[t][i-1] +
+                     (alpha + beta) * grid_[t][i+1];
+        }
+        
+        // Solve tridiagonal system
+        thomasAlgorithm(a, b, c, solution, rhs);
+        
+        // Project solution onto the constraint (payoff)
+        #pragma omp parallel for
+        for (size_t i = 0; i < numSpaceSteps_; ++i) {
+            double S = i * dx;
+            double payoff = option_->payoff({S});
+            grid_[t-1][i] = std::max(solution[i], payoff);
+        }
+    }
+    
+    // Return interpolated value at spot price
+    size_t idx = static_cast<size_t>(option_->spot / dx);
+    double lambda = (option_->spot - idx * dx) / dx;
+    return (1.0 - lambda) * grid_[0][idx] + lambda * grid_[0][idx + 1];
+}
+
+} // namespace hybrid_pricer

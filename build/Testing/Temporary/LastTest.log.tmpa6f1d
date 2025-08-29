@@ -1,0 +1,343 @@
+Start testing: Aug 28 19:56 IST
+----------------------------------------------------------
+1/30 Testing: EuropeanOptionTest.BlackScholesComparison
+1/30 Test: EuropeanOptionTest.BlackScholesComparison
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=EuropeanOptionTest.BlackScholesComparison" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"EuropeanOptionTest.BlackScholesComparison" start time: Aug 28 19:56 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = EuropeanOptionTest.BlackScholesComparison
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EuropeanOptionTest
+[ RUN      ] EuropeanOptionTest.BlackScholesComparison
+[       OK ] EuropeanOptionTest.BlackScholesComparison (0 ms)
+[----------] 1 test from EuropeanOptionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"EuropeanOptionTest.BlackScholesComparison" end time: Aug 28 19:56 IST
+"EuropeanOptionTest.BlackScholesComparison" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/30 Testing: AsianOptionTest.GeometricVsArithmetic
+2/30 Test: AsianOptionTest.GeometricVsArithmetic
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=AsianOptionTest.GeometricVsArithmetic" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"AsianOptionTest.GeometricVsArithmetic" start time: Aug 28 19:56 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = AsianOptionTest.GeometricVsArithmetic
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from AsianOptionTest
+[ RUN      ] AsianOptionTest.GeometricVsArithmetic
+/Users/funda/Documents/Projects/quant/tests/test_asian_option.cpp:30: Failure
+Expected: (geomPrice) < (arithPrice), actual: 0 vs 0
+
+[  FAILED  ] AsianOptionTest.GeometricVsArithmetic (694 ms)
+[----------] 1 test from AsianOptionTest (694 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (694 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] AsianOptionTest.GeometricVsArithmetic
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.70 sec
+----------------------------------------------------------
+Test Failed.
+"AsianOptionTest.GeometricVsArithmetic" end time: Aug 28 19:56 IST
+"AsianOptionTest.GeometricVsArithmetic" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/30 Testing: AsianOptionTest.ControlVariateEfficiency
+3/30 Test: AsianOptionTest.ControlVariateEfficiency
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=AsianOptionTest.ControlVariateEfficiency" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"AsianOptionTest.ControlVariateEfficiency" start time: Aug 28 19:56 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = AsianOptionTest.ControlVariateEfficiency
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from AsianOptionTest
+[ RUN      ] AsianOptionTest.ControlVariateEfficiency
+/Users/funda/Documents/Projects/quant/tests/test_lookback_option.cpp:98: Failure
+Expected: (standardErrorCV) < (standardError), actual: 0 vs 0
+
+/Users/funda/Documents/Projects/quant/tests/test_lookback_option.cpp:99: Failure
+The difference between priceCV and priceStandard is nan, which exceeds 2.0, where
+priceCV evaluates to nan,
+priceStandard evaluates to 0, and
+2.0 evaluates to 2.
+
+[  FAILED  ] AsianOptionTest.ControlVariateEfficiency (80 ms)
+[----------] 1 test from AsianOptionTest (80 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (80 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] AsianOptionTest.ControlVariateEfficiency
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Failed.
+"AsianOptionTest.ControlVariateEfficiency" end time: Aug 28 19:56 IST
+"AsianOptionTest.ControlVariateEfficiency" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/30 Testing: BarrierOptionTest.KnockOutProperties
+4/30 Test: BarrierOptionTest.KnockOutProperties
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=BarrierOptionTest.KnockOutProperties" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"BarrierOptionTest.KnockOutProperties" start time: Aug 28 19:56 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = BarrierOptionTest.KnockOutProperties
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BarrierOptionTest
+[ RUN      ] BarrierOptionTest.KnockOutProperties
+[       OK ] BarrierOptionTest.KnockOutProperties (0 ms)
+[----------] 1 test from BarrierOptionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"BarrierOptionTest.KnockOutProperties" end time: Aug 28 19:56 IST
+"BarrierOptionTest.KnockOutProperties" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/30 Testing: BarrierOptionTest.InOutParity
+5/30 Test: BarrierOptionTest.InOutParity
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=BarrierOptionTest.InOutParity" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"BarrierOptionTest.InOutParity" start time: Aug 28 19:56 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = BarrierOptionTest.InOutParity
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BarrierOptionTest
+[ RUN      ] BarrierOptionTest.InOutParity
+[       OK ] BarrierOptionTest.InOutParity (1004 ms)
+[----------] 1 test from BarrierOptionTest (1004 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1004 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   1.01 sec
+----------------------------------------------------------
+Test Passed.
+"BarrierOptionTest.InOutParity" end time: Aug 28 19:56 IST
+"BarrierOptionTest.InOutParity" time elapsed: 00:00:01
+----------------------------------------------------------
+
+6/30 Testing: LookbackOptionTest.FixedStrikeProperties
+6/30 Test: LookbackOptionTest.FixedStrikeProperties
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=LookbackOptionTest.FixedStrikeProperties" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"LookbackOptionTest.FixedStrikeProperties" start time: Aug 28 19:56 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LookbackOptionTest.FixedStrikeProperties
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LookbackOptionTest
+[ RUN      ] LookbackOptionTest.FixedStrikeProperties
+[       OK ] LookbackOptionTest.FixedStrikeProperties (694 ms)
+[----------] 1 test from LookbackOptionTest (694 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (694 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.70 sec
+----------------------------------------------------------
+Test Passed.
+"LookbackOptionTest.FixedStrikeProperties" end time: Aug 28 19:56 IST
+"LookbackOptionTest.FixedStrikeProperties" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/30 Testing: LookbackOptionTest.FloatingStrikeProperties
+7/30 Test: LookbackOptionTest.FloatingStrikeProperties
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=LookbackOptionTest.FloatingStrikeProperties" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"LookbackOptionTest.FloatingStrikeProperties" start time: Aug 28 19:56 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LookbackOptionTest.FloatingStrikeProperties
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LookbackOptionTest
+[ RUN      ] LookbackOptionTest.FloatingStrikeProperties
+[       OK ] LookbackOptionTest.FloatingStrikeProperties (0 ms)
+[----------] 1 test from LookbackOptionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LookbackOptionTest.FloatingStrikeProperties" end time: Aug 28 19:56 IST
+"LookbackOptionTest.FloatingStrikeProperties" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/30 Testing: TwoAssetOptionTest.SpreadOptionProperties
+8/30 Test: TwoAssetOptionTest.SpreadOptionProperties
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=TwoAssetOptionTest.SpreadOptionProperties" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"TwoAssetOptionTest.SpreadOptionProperties" start time: Aug 28 19:56 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = TwoAssetOptionTest.SpreadOptionProperties
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TwoAssetOptionTest
+[ RUN      ] TwoAssetOptionTest.SpreadOptionProperties
+/Users/funda/Documents/Projects/quant/tests/test_two_asset_option.cpp:42: Failure
+Expected: (price2) > (price), actual: 1.8511463618018686 vs 2.5184992449332579
+
+[  FAILED  ] TwoAssetOptionTest.SpreadOptionProperties (1224 ms)
+[----------] 1 test from TwoAssetOptionTest (1224 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1224 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] TwoAssetOptionTest.SpreadOptionProperties
+
+ 1 FAILED TEST
+<end of output>
+Test time =   1.23 sec
+----------------------------------------------------------
+Test Failed.
+"TwoAssetOptionTest.SpreadOptionProperties" end time: Aug 28 19:56 IST
+"TwoAssetOptionTest.SpreadOptionProperties" time elapsed: 00:00:01
+----------------------------------------------------------
+
+9/30 Testing: TwoAssetOptionTest.BasketOptionProperties
+9/30 Test: TwoAssetOptionTest.BasketOptionProperties
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=TwoAssetOptionTest.BasketOptionProperties" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"TwoAssetOptionTest.BasketOptionProperties" start time: Aug 28 19:56 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = TwoAssetOptionTest.BasketOptionProperties
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TwoAssetOptionTest
+[ RUN      ] TwoAssetOptionTest.BasketOptionProperties
+[       OK ] TwoAssetOptionTest.BasketOptionProperties (564 ms)
+[----------] 1 test from TwoAssetOptionTest (564 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (564 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.57 sec
+----------------------------------------------------------
+Test Passed.
+"TwoAssetOptionTest.BasketOptionProperties" end time: Aug 28 19:56 IST
+"TwoAssetOptionTest.BasketOptionProperties" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/30 Testing: TwoAssetOptionTest.RainbowOptionProperties
+10/30 Test: TwoAssetOptionTest.RainbowOptionProperties
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=TwoAssetOptionTest.RainbowOptionProperties" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"TwoAssetOptionTest.RainbowOptionProperties" start time: Aug 28 19:56 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = TwoAssetOptionTest.RainbowOptionProperties
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TwoAssetOptionTest
+[ RUN      ] TwoAssetOptionTest.RainbowOptionProperties
+[       OK ] TwoAssetOptionTest.RainbowOptionProperties (930 ms)
+[----------] 1 test from TwoAssetOptionTest (930 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (930 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.93 sec
+----------------------------------------------------------
+Test Passed.
+"TwoAssetOptionTest.RainbowOptionProperties" end time: Aug 28 19:56 IST
+"TwoAssetOptionTest.RainbowOptionProperties" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/30 Testing: MonteCarloTest.VarianceReduction
+11/30 Test: MonteCarloTest.VarianceReduction
+Command: "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests" "--gtest_filter=MonteCarloTest.VarianceReduction" "--gtest_also_run_disabled_tests"
+Directory: /Users/funda/Documents/Projects/quant/build/tests
+"MonteCarloTest.VarianceReduction" start time: Aug 28 19:56 IST
+Output:
+----------------------------------------------------------
+Running main() from /private/tmp/googletest-20250808-4780-aa0gxy/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = MonteCarloTest.VarianceReduction
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MonteCarloTest
+[ RUN      ] MonteCarloTest.VarianceReduction
+/Users/funda/Documents/Projects/quant/tests/test_monte_carlo.cpp:29: Failure
+Expected: (width2) < (width1), actual: 0.1806644568143323 vs 0.18054860155920061
+
+/Users/funda/Documents/Projects/quant/tests/test_monte_carlo.cpp:32: Failure
+Value of: price1 >= ci2[0] && price1 <= ci2[1]
+  Actual: false
+Expected: true
+
+/Users/funda/Documents/Projects/quant/tests/test_monte_carlo.cpp:33: Failure
+Value of: price2 >= ci1[0] && price2 <= ci1[1]
+  Actual: false
+Expected: true
+
+[  FAILED  ] MonteCarloTest.VarianceReduction (410 ms)
+[----------] 1 test from MonteCarloTest (410 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (410 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] MonteCarloTest.VarianceReduction
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.42 sec
+----------------------------------------------------------
+Test Failed.
+"MonteCarloTest.VarianceReduction" end time: Aug 28 19:56 IST
+"MonteCarloTest.VarianceReduction" time elapsed: 00:00:00
+----------------------------------------------------------
+

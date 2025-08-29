@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/funda/Documents/Projects/quant/build/cmake_install.cmake",
+		"/Users/funda/Documents/Projects/quant/build/src/cmake_install.cmake",
+		"/Users/funda/Documents/Projects/quant/build/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

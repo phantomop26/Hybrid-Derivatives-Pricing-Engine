@@ -1,0 +1,5 @@
+if(EXISTS "/Users/funda/Documents/Projects/quant/build/tests/pricer_tests[1]_tests.cmake")
+  include("/Users/funda/Documents/Projects/quant/build/tests/pricer_tests[1]_tests.cmake")
+else()
+  add_test(pricer_tests_NOT_BUILT pricer_tests_NOT_BUILT)
+endif()

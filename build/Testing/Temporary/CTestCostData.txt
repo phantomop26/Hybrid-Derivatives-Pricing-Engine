@@ -1,0 +1,51 @@
+pricer_tests_NOT_BUILT 0 0
+EuropeanOptionTest.BlackScholesComparison 10 0.000380208
+AsianOptionTest.GeometricVsArithmetic 0 0
+AsianOptionTest.ControlVariateEfficiency 0 0
+BarrierOptionTest.KnockOutProperties 10 0.000355167
+BarrierOptionTest.InOutParity 10 0.0953799
+LookbackOptionTest.FixedStrikeProperties 10 0.0626424
+LookbackOptionTest.FloatingStrikeProperties 10 0.000366375
+TwoAssetOptionTest.SpreadOptionProperties 0 0
+TwoAssetOptionTest.BasketOptionProperties 9 0.0615673
+TwoAssetOptionTest.RainbowOptionProperties 9 0.0976821
+MonteCarloTest.VarianceReduction 0 0
+MonteCarloTest.ImportanceSampling 0 0
+PDESolverTest.EuropeanConvergence 10 0.000578908
+PDESolverTest.ExplicitEuler 0 0
+PDESolverTest.AmericanPutEarlyExercise 0 0
+PDESolverTest.ADIAsianOption 0 0
+PDESolverTest.MethodComparison 0 0
+PDESolverTest.StabilityCheck 0 0
+PDESolverTest.BoundaryConditions 10 0.000329083
+PDESolverTest.CompareAllMethods 0 0
+PDESolverTest.HighVolatilityCase 0 0
+SobolTest.FirstDimension 0 0
+SobolTest.Dimensionality 10 0.000316417
+SobolTest.SequenceUniformity 1 0
+SobolPricingTest.EuropeanCallOption 0 0
+SobolPricingTest.AsianOption 10 0.000331846
+GPUTest.CompareWithCPU 0 0
+GPUTest.AsianOption 0 0
+GPUTest.BarrierOption 0 0
+MonteCarloTest.ControlVariate 0 0
+---
+AsianOptionTest.GeometricVsArithmetic
+AsianOptionTest.ControlVariateEfficiency
+TwoAssetOptionTest.SpreadOptionProperties
+MonteCarloTest.VarianceReduction
+MonteCarloTest.ImportanceSampling
+MonteCarloTest.ControlVariate
+PDESolverTest.ExplicitEuler
+PDESolverTest.AmericanPutEarlyExercise
+PDESolverTest.ADIAsianOption
+PDESolverTest.MethodComparison
+PDESolverTest.StabilityCheck
+PDESolverTest.CompareAllMethods
+PDESolverTest.HighVolatilityCase
+SobolTest.FirstDimension
+SobolTest.SequenceUniformity
+SobolPricingTest.EuropeanCallOption
+GPUTest.CompareWithCPU
+GPUTest.AsianOption
+GPUTest.BarrierOption
